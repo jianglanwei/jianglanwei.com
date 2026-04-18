@@ -1,0 +1,15 @@
+# OS X System Files
+.DS_Store
+Thumbs.db
+
+# VS Code Settings
+.vscode/
+*.code-workspace
+
+# Build outputs
+_site/
+dist/
+build/
+
+# Logs
+*.log

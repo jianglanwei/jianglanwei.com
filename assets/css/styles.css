@@ -1,0 +1,236 @@
+/* Page Max Width */
+
+body {
+  max-width: 750px;
+  margin: auto;
+  padding: 3%;
+}
+
+/* Font Family, Size & Color */
+
+h1 { /* profile person's name */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 32px;
+  font-weight: normal;
+  text-align: center;
+}
+
+h2 { /* section header (news, research, projects, etc.) */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 22px;
+  font-weight: normal;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+
+h3 { /* project name (research, course project) */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+}
+
+body,
+p,
+div { /* contents */
+  font-family: 'Lato', Verdana, Helvetica, sans-serif;
+  font-size: 14px;
+}
+
+a {
+  color: #1772d0;
+  text-decoration: none;
+}
+
+a:focus,
+a:hover {
+  color: #f09228;
+  text-decoration: none;
+}
+
+/* Header (Name, Brief Intro, Profile Picture, Links) */
+
+header {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: center;
+  gap: 5%;
+}
+
+header > div {
+  order: 1;
+  flex: 1 1 480px;
+}
+
+header > figure {
+  order: 2;
+  margin: 0px;
+  flex: 1 1 240px;
+}
+
+header img {
+  width: 100%;
+  object-fit: cover;
+  border-radius: 15px;
+}
+
+header nav {
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 1%;
+}
+
+/* News Item */
+
+.news-item {
+  display: flex;
+  flex-flow: row nowrap;
+  align-items: flex-start;
+  margin-bottom: 15px;
+  gap: 2%;
+}
+
+.news-item > time {
+  order: 1;
+  flex: 0 0 65px;
+  font-weight: bold;
+}
+
+.news-item > p {
+  order: 2;
+  flex-grow: 1;
+  margin: 0px;
+}
+
+/* Project Item */
+
+.proj-item {
+  display: flex;
+  flex-flow: row wrap-reverse;
+  align-items: center;
+  margin-bottom: 50px;
+  min-height: 200px;
+  gap: 2%;
+  row-gap: 20px;
+}
+
+.proj-item > figure {
+  order: 1;
+  flex-grow: 1;
+  width: 280px;
+  margin: 0px;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: space-evenly;
+
+  & * {
+    flex-grow: 1;
+    min-width: 0px;
+    max-height: 240px;
+    border-radius: 8px;
+  }
+
+  & picture {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
+
+.proj-item > div {
+  order: 2;
+  flex-grow: 1;
+  flex-basis: 455px;
+}
+
+.proj-item h3 {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.proj-item .authors {
+  margin-top: 3px;
+  margin-bottom: 25px;
+  & .co-first::after {
+    content: "*";
+  }
+}
+
+.proj-item .publication {
+  margin: 0px;
+  & .award {
+    color: rgb(200, 0, 255);
+    font-weight: bold;
+  }
+  & .venue {
+    font-style: italic;
+  }
+}
+
+.proj-item .links {
+  margin: 0px;
+}
+
+@media (min-width: 795px) {
+  h2 + .proj-item {
+    margin-top: -20px;
+  }
+}
+
+/* Note Item (takes up half the width on desktop screens) */
+
+.notes {
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
+  margin-top: 40px;
+  gap: 5%;
+}
+
+.note-item {
+  flex: 1 1 250px;
+  margin-bottom: 50px;
+  min-width: 0px;
+}
+
+.note-item h3 {
+  font-size: 14px;
+  margin: 0px;
+}
+
+.note-item .chapters {
+  margin-top: 3px;
+  margin-bottom: 30px;
+}
+
+.note-item > figure {
+  display: flex;
+  flex-flow: row nowrap;
+  margin: 0px;
+
+  & * {
+    flex-grow: 1;
+    min-width: 0px;
+    max-height: 240px;
+    border-radius: 8px;
+  }
+
+  & picture {
+    display: flex;
+    flex-flow: row nowrap;
+  }
+}
+
+/* Acknowledgement */
+
+footer p {
+  display: flex;
+  flex-flow: row wrap;
+  justify-content: flex-end;
+  margin: 2px;
+  gap: 3px;
+  text-align: right;
+  & * {
+    text-align: right;
+  }
+}
