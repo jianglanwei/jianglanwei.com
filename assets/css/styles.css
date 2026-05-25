@@ -125,7 +125,6 @@ header nav {
   justify-content: space-evenly;
 
   & * {
-    flex-grow: 1;
     min-width: 0px;
     max-height: 240px;
     border-radius: 8px;
@@ -170,6 +169,21 @@ header nav {
 .proj-item .links {
   margin: 0px;
 }
+
+.video-item {
+  display: grid;
+  grid-template-columns: 1fr;
+  & .video-poster {
+    grid-area: 1 / 1;
+    z-index: 1;
+    max-width: 100%;
+  }
+  & .video-source {
+    grid-area: 1 / 1;
+    z-index: 2;
+    max-width: 100%;
+  }
+  }
 
 @media (min-width: 795px) {
   h2 + .proj-item {

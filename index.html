@@ -24,6 +24,9 @@
     <meta property="og:url" content="https://jianglanwei.com">
     <meta property="og:type" content="website">
 
+    <!-- The Canonical Link -->
+    <link rel="canonical" href="https://jianglanwei.com/">
+
     <!-- Preload Fonts -->
     <link rel="preload" href="/assets/fonts/lato-v25-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
     <link rel="preload" href="/assets/fonts/lato-v25-latin_latin-ext-italic.woff2" as="font" type="font/woff2" crossorigin>
@@ -162,9 +165,12 @@
         </div>
 
         <figure>
-          <video autoplay muted loop playsinline poster="/assets/media/ReOI-960x480.jpg">
-            <source src="/assets/media/ReOI-960x480.mp4" type="video/mp4">
-          </video>
+          <div class="video-item">
+            <img class="video-poster" src="/assets/media/ReOI-960x480.jpg">
+            <video class="video-source" autoplay muted loop playsinline>
+              <source src="/assets/media/ReOI-960x480.mp4" type="video/mp4">
+            </video>
+          </div>
         </figure>
       </div>
 
@@ -199,9 +205,12 @@
         </div>
 
         <figure>
-          <video autoplay muted loop playsinline poster="/assets/media/MEReQ-960x480.jpg">
-            <source src="/assets/media/MEReQ-960x480.mp4" type="video/mp4">
-          </video>
+          <div class="video-item">
+            <img class="video-poster" src="/assets/media/MEReQ-960x480.jpg">
+            <video class="video-source" autoplay muted loop playsinline>
+              <source src="/assets/media/MEReQ-960x480.mp4" type="video/mp4">
+            </video>
+          </div>
         </figure>
       </div>
 
@@ -227,7 +236,7 @@
           </p>
           
           <p class="publication">
-            <span class="venue">The International Conference on Learning Representations (ICLR)</span>,
+            <span class="venue">International Conference on Learning Representations (ICLR)</span>,
             <time datetime="2026">2026</time>
           </p>
 
@@ -238,9 +247,12 @@
         </div>
 
         <figure>
-          <video autoplay muted loop playsinline poster="/assets/media/InterleaveVLA-480x480.jpg">
-            <source src="/assets/media/InterleaveVLA-480x480.mp4" type="video/mp4">
-          </video>
+          <div class="video-item">
+            <img class="video-poster" src="/assets/media/InterleaveVLA-480x480.jpg">
+            <video class="video-source" autoplay muted loop playsinline>
+              <source src="/assets/media/InterleaveVLA-480x480.mp4" type="video/mp4">
+            </video>
+          </div>
         </figure>
       </div>
 
@@ -339,12 +351,18 @@
         </div>
         
         <figure>
-          <video autoplay muted loop playsinline poster="/assets/media/CS180-Morph-900x480.jpg">
-            <source src="/assets/media/CS180-Morph-900x480.mp4" type="video/mp4">
-          </video>
-          <video autoplay muted loop playsinline poster="/assets/media/CS180-NeRF-480x480.jpg">
-            <source src="/assets/media/CS180-NeRF-480x480.mp4" type="video/mp4">
-          </video>
+          <div class="video-item">
+            <img class="video-poster" src="/assets/media/CS180-Morph-900x480.jpg">
+            <video class="video-source" autoplay muted loop playsinline>
+              <source src="/assets/media/CS180-Morph-900x480.mp4" type="video/mp4">
+            </video>
+          </div>
+          <div class="video-item">
+            <img class="video-poster" src="/assets/media/CS180-NeRF-480x480.jpg">
+            <video class="video-source" autoplay muted loop playsinline>
+              <source src="/assets/media/CS180-NeRF-480x480.mp4" type="video/mp4">
+            </video>
+          </div>
         </figure>
       </div>
 
@@ -365,9 +383,12 @@
         </div>
 
         <figure>
-          <video autoplay muted loop playsinline poster="/assets/media/SLAM-960x480.jpg">
-            <source src="/assets/media/SLAM-960x480.mp4" type="video/mp4">
-          </video>
+          <div class="video-item">
+            <img class="video-poster" src="/assets/media/SLAM-960x480.jpg">
+            <video class="video-source" autoplay muted loop playsinline>
+              <source src="/assets/media/SLAM-960x480.mp4" type="video/mp4">
+            </video>
+          </div>
         </figure>
       </div>
     </section>
