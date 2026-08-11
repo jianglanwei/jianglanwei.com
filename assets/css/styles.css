@@ -58,13 +58,13 @@ header {
 
 header > div {
   order: 1;
-  flex: 1 1 480px;
+  flex: 1 1 460px;
 }
 
 header > figure {
   order: 2;
   margin: 0px;
-  flex: 1 1 240px;
+  flex: 1 1 260px;
 }
 
 header img {
