@@ -27,17 +27,20 @@
     <!-- The Canonical Link -->
     <link rel="canonical" href="https://jianglanwei.com/">
 
-    <!-- Preload Fonts -->
-    <link rel="preload" href="/assets/fonts/lato-v25-latin_latin-ext-regular.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/lato-v25-latin_latin-ext-italic.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/lato-v25-latin_latin-ext-700.woff2" as="font" type="font/woff2" crossorigin>
-    <link rel="preload" href="/assets/fonts/lato-v25-latin_latin-ext-700italic.woff2" as="font" type="font/woff2" crossorigin>
+    <!-- Preload Fonts (variable files include regular and bold weights) -->
+    <link rel="preload" href="/assets/fonts/Lora/Lora-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/Lora/Lora-Italic-VariableFont_wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/Newsreader/Newsreader-Italic-VariableFont_opsz,wght.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/SourceSans3/SourceSans3-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/SourceSans3/SourceSans3-Italic-Variable.ttf" as="font" type="font/ttf" crossorigin>
+    <link rel="preload" href="/assets/fonts/SourceSerif4/SourceSerif4-Variable.ttf" as="font" type="font/ttf" crossorigin>
 
     <!-- Preload Video Posters -->
     <link rel="preload" href="/assets/media/ReOI-960x480.jpg" as="image">
     <link rel="preload" href="/assets/media/InterleaveVLA-480x480.jpg" as="image">
     <link rel="preload" href="/assets/media/MEReQ-960x480.jpg" as="image">
-    <link rel="preload" href="/assets/media/CS180-Morph-900x480.jpg" as="image">
+    <link rel="preload" href="/assets/media/CS180-Morph-384x480.jpg" as="image">
     <link rel="preload" href="/assets/media/CS180-NeRF-480x480.jpg" as="image">
     <link rel="preload" href="/assets/media/SLAM-960x480.jpg" as="image">
 
@@ -50,13 +53,15 @@
   </head>
 
   <body>
-    <!-- Header -->
+    <!-- Name and Affiliation -->
     <header>
+      <h1>Jianglan Wei</h1>
+      <div>Robotics Institute, Carnegie Mellon University</div>
+    </header>
+
+    <!-- Biography and Profile Picture -->
+    <section class="bio">
       <div>
-
-        <!-- Name & Introduction -->
-        <h1>Jianglan Wei</h1>
-
         <p>
           I am an MS Robotics student at <a href="https://cmu.edu">Carnegie Mellon University</a>,
           advised by Prof. <a href="https://davheld.github.io">David Held</a>. 
@@ -68,26 +73,56 @@
           My research focuses on learning for manipulation, particularly in noisy and unfamiliar environments.
           I am working towards a future where robots can do anything humans can do, and more!
         </p>
-
-        <!-- Links -->
-        <nav>
-          <a href="mailto:jianglan@cmu.edu">Email</a> /
-          <a href="/assets/resume/JianglanWei-CV.pdf">CV</a> /
-          <a href="https://scholar.google.com/citations?user=ZP4ETh0AAAAJ">Scholar</a> /
-          <a href="https://github.com/jianglanwei/">GitHub</a> /
-          <a href="https://x.com/intent/follow?screen_name=jianglanwei">X</a>
-        </nav>
       </div>
 
       <!-- Profile Picture -->
       <figure>
         <img src="assets/media/JianglanWei-480x480.jpg" alt="Jianglan Wei Profile Picture">
       </figure>
-    </header>
+    </section>
+
+    <!-- Links -->
+    <nav class="profile-links" aria-label="Profile links">
+      <a class="button" href="mailto:jianglan@cmu.edu">
+        <span style="--icon: url('/assets/icons/email.svg')" aria-hidden="true"></span>
+        Email
+      </a>
+      <a class="button" href="/assets/resume/JianglanWei-CV.pdf">
+        <span style="--icon: url('/assets/icons/resume.svg')" aria-hidden="true"></span>
+        Resume
+      </a>
+      <a class="button" href="https://scholar.google.com/citations?user=ZP4ETh0AAAAJ">
+        <span style="--icon: url('/assets/icons/scholar.svg')" aria-hidden="true"></span>
+        Scholar
+      </a>
+      <a class="button" href="https://github.com/jianglanwei/">
+        <span style="--icon: url('/assets/icons/github.svg')" aria-hidden="true"></span>
+        GitHub
+      </a>
+      <a class="button" href="https://x.com/intent/follow?screen_name=jianglanwei">
+        <span style="--icon: url('/assets/icons/x.svg')" aria-hidden="true"></span>
+        X
+      </a>
+    </nav>
 
     <!-- News -->
     <section>
       <h2>News</h2>
+
+      <div class="news-item">
+        <time datetime="2026-08">Aug 2026</time>
+        <p>
+          Joined the <a href="https://r-pad.github.io/">Robot Perceiving and Doing (RPAD) Lab</a> at CMU, advised by Prof. <a href="https://davheld.github.io">David Held</a>. 
+        </p>
+      </div>
+
+      <div class="news-item">
+        <time datetime="2026-06">Jun 2026</time>
+        <p>
+          Attended <a href="https://2026.ieee-icra.org/">ICRA 2026</a> in Vienna to present the <a href="https://re-oi.github.io">ReOI World Model</a> 
+          (<a href="/assets/media/Me@ICRA2026-4096x3072.jpg">photo</a>).
+        </p>
+      </div>
 
       <div class="news-item">
         <time datetime="2026-03">Mar 2026</time>
@@ -96,35 +131,47 @@
         </p>
       </div>
 
-      <div class="news-item">
-        <time datetime="2025-05">May 2025</time>
-        <p>
-          Invited to deliver the student address at the <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/">Berkeley Global Access</a> closing ceremony.
-        </p>
-      </div>
+      <details class="news-archive">
+        <summary>Older news (before 2026)</summary>
 
-      <div class="news-item">
-        <time datetime="2024-12">Dec 2024</time>
-        <p>
-          Awarded the <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/scholarships/"> UC Berkeley BGA Scholarship</a> 2024 (Top 10 students per term).
-        </p>
-      </div>
+        <div class="news-item">
+          <time datetime="2025-10">Oct 2025</time>
+          <p>
+            Attended <a href="https://2025.corl.org/">CoRL 2025</a> in Seoul to present <a href="https://thomaschen98.github.io/mereq.github.io/">MEReQ</a>
+            (<a href="assets/media/Me@CoRL2025-1536x2048.jpg">photo</a>).
+          </p>
+        </div>
 
-      <div class="news-item">
-        <time datetime="2024-11">Nov 2024</time>
-        <p>
-          Won the National First Prize in the <a href="https://en.mcm.edu.cn"> Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</a> 2024 (Top 0.5% among 59,278 teams).
-        </p>
-      </div>
+        <div class="news-item">
+          <time datetime="2025-05">May 2025</time>
+          <p>
+            Invited to deliver the student address at the <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/">Berkeley Global Access</a> closing ceremony.
+          </p>
+        </div>
 
-      <div class="news-item">
-        <time datetime="2024-11">Nov 2024</time>
-        <p>
-          Joined the <a href="https://msc.berkeley.edu">Mechanical Systems Control (MSC) Lab</a> at UC Berkeley as a research assistant, 
-          advised by Prof. <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>
-          (<a href="/assets/media/Tomizuka&Me-4032x3024.jpeg">our photo</a>).
-        </p>
-      </div>
+        <div class="news-item">
+          <time datetime="2024-12">Dec 2024</time>
+          <p>
+            Awarded the <a href="https://extension.berkeley.edu/international/academic/berkeley-global-access/scholarships/"> UC Berkeley BGA Scholarship</a> 2024 (Top 10 students per term).
+          </p>
+        </div>
+
+        <div class="news-item">
+          <time datetime="2024-11">Nov 2024</time>
+          <p>
+            Won the National First Prize in the <a href="https://en.mcm.edu.cn"> Contemporary Undergraduate Mathematical Contest in Modeling (CUMCM)</a> 2024 (Top 0.5% among 59,278 teams).
+          </p>
+        </div>
+
+        <div class="news-item">
+          <time datetime="2024-11">Nov 2024</time>
+          <p>
+            Joined the <a href="https://msc.berkeley.edu">Mechanical Systems Control (MSC) Lab</a> at UC Berkeley,
+            advised by Prof. <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>
+            (<a href="/assets/media/Tomizuka&Me-4032x3024.jpeg">our photo</a>).
+          </p>
+        </div>
+      </details>
     </section>
 
     <!-- Research -->
@@ -133,41 +180,32 @@
 
       <div class="proj-item">
         <div>
-          <a href="https://re-oi.github.io">
-            <h3>Reimagination with Test-time Observation Interventions: Distractor-Robust World Model Predictions for Visual Model Predictive Control</h3>
-          </a>
+          <h3>Reimagination with Test-time Observation Interventions</h3>
 
           <p class="authors">
-            <a href="https://thomaschen98.github.io" class="co-first">Yuxin Chen</a>, 
-            <strong class="co-first">Jianglan Wei</strong>, 
-            <a href="https://www.chenfengx.com">Chenfeng Xu</a>, 
-            <a href="https://sites.google.com/site/boyilics/home">Boyi Li</a>, 
-            <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>, 
-            <a href="https://www.cs.cmu.edu/~abajcsy/">Andrea Bajcsy</a>, 
-            <a href="https://thomasrantian.github.io">Ran Tian</a>
+            Yuxin Chen*, <strong>Jianglan Wei*</strong>, Chenfeng Xu, Boyi Li, Masayoshi Tomizuka, Andrea Bajcsy, Ran Tian
           </p>
           
           <p class="publication">
             <span class="award">Best Paper Finalist</span> at
             <span class="venue">RSS Out-of-Distribution Workshop</span>, 
             <time datetime="2025">2025</time>
-          </p>
-
-          <p class="publication">
+            <br>
             <span class="venue">IEEE International Conference on Robotics and Automation (ICRA)</span>,
             <time datetime="2026">2026</time>
           </p>
 
-          <p class="links">
-            <a href="https://re-oi.github.io">project page</a> /
-            <a href="https://arxiv.org/abs/2506.16565">arXiv</a>
+          <p>
+            <a class="icon-link" href="https://re-oi.github.io"><span class="icon" style="--icon: url('/assets/icons/globe.svg')" aria-hidden="true"></span><span>website</span></a>
+            <a class="icon-link" href="https://arxiv.org/abs/2506.16565"><span class="icon" style="--icon: url('/assets/icons/arxiv.svg')" aria-hidden="true"></span><span>arXiv</span></a>
           </p>
+
         </div>
 
         <figure>
           <div class="video-item">
-            <img class="video-poster" src="/assets/media/ReOI-960x480.jpg">
-            <video class="video-source" autoplay muted loop playsinline>
+            <img class="video-poster" src="/assets/media/ReOI-960x480.jpg" width="960" height="480">
+            <video class="video-source" autoplay muted loop playsinline width="960" height="480">
               <source src="/assets/media/ReOI-960x480.mp4" type="video/mp4">
             </video>
           </div>
@@ -177,20 +215,10 @@
 
       <div class="proj-item">
         <div>
-          <a href="https://sites.google.com/view/mereq/home">
-            <h3>MEReQ: Max-Ent Residual-Q Inverse RL for Sample-Efficient Alignment from Intervention</h3>
-          </a>
+          <h3>MEReQ: Max-Ent Residual-Q Inverse RL for Sample-Efficient Alignment from Intervention</h3>
 
           <p class="authors">
-            <a href="https://thomaschen98.github.io" class="co-first">Yuxin Chen</a>, 
-            <a href="https://chentangmark.github.io" class="co-first">Chen Tang</a>, 
-            <strong>Jianglan Wei</strong>, 
-            <a href="https://scholar.google.com/citations?user=O_PbKNMAAAAJ">Chenran Li</a>, 
-            <a href="https://thomasrantian.github.io">Ran Tian</a>, 
-            <a href="https://xiang-zhang-98.github.io">Xiang Zhang</a>, 
-            <a href="https://zhanwei.site">Wei Zhan</a>, 
-            <a href="https://www.cs.utexas.edu/~pstone/">Peter Stone</a>, 
-            <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>
+            Yuxin Chen*, Chen Tang*, <strong>Jianglan Wei</strong>, Chenran Li, Ran Tian, Xiang Zhang, Wei Zhan, Peter Stone, Masayoshi Tomizuka
           </p>
           
           <p class="publication">
@@ -198,16 +226,16 @@
             <time datetime="2025">2025</time>
           </p>
 
-          <p class="links">
-            <a href="https://sites.google.com/view/mereq/home">project page</a> /
-            <a href="https://arxiv.org/abs/2406.16258">arXiv</a>
+          <p>
+            <a class="icon-link" href="https://thomaschen98.github.io/mereq.github.io/"><span class="icon" style="--icon: url('/assets/icons/globe.svg')" aria-hidden="true"></span><span>website</span></a>
+            <a class="icon-link" href="https://arxiv.org/abs/2406.16258"><span class="icon" style="--icon: url('/assets/icons/arxiv.svg')" aria-hidden="true"></span><span>arXiv</span></a>
           </p>
         </div>
 
         <figure>
           <div class="video-item">
-            <img class="video-poster" src="/assets/media/MEReQ-960x480.jpg">
-            <video class="video-source" autoplay muted loop playsinline>
+            <img class="video-poster" src="/assets/media/MEReQ-960x480.jpg" width="960" height="480">
+            <video class="video-source" autoplay muted loop playsinline width="960" height="480">
               <source src="/assets/media/MEReQ-960x480.mp4" type="video/mp4">
             </video>
           </div>
@@ -217,22 +245,10 @@
 
       <div class="proj-item">
         <div>
-          <a href="https://interleave-vla.github.io/Interleave-VLA-Anonymous/">
-            <h3>Interleave-VLA: Enhancing Robot Manipulation with Interleaved Instructions</h3>
-          </a>
+          <h3>Interleave-VLA: Enhancing Robot Manipulation with Interleaved Instructions</h3>
 
           <p class="authors">
-            <a href="https://scholar.google.com/citations?user=n6jDCz0AAAAJ" class="co-first">Cunxin Fan</a>,
-            <a href="https://jiaxiaosong1002.github.io" class="co-first">Xiaosong Jia</a>, 
-            <a onclick="alert('Profile information not available.')">Yihang Sun</a>, 
-            <a href="https://yixiaowang7.github.io">Yixiao Wang</a>, 
-            <strong>Jianglan Wei</strong>, 
-            <a href="https://scholar.google.com/citations?user=cWip8QgAAAAJ">Ziyang Gong</a>, 
-            <a onclick="alert('Profile information not available.')">Xiangyu Zhao</a>,
-            <a href="https://me.berkeley.edu/people/masayoshi-tomizuka/">Masayoshi Tomizuka</a>, 
-            <a href="https://yangxue.site">Xue Yang</a>, 
-            <a href="http://thinklab.sjtu.edu.cn">Junchi Yan</a>, 
-            <a href="https://dingmyu.github.io">Mingyu Ding</a>
+            Cunxin Fan*, Xiaosong Jia*, Yihang Sun, Yixiao Wang, <strong>Jianglan Wei</strong>, Ziyang Gong, Xiangyu Zhao, Masayoshi Tomizuka, Xue Yang, Junchi Yan, Mingyu Ding
           </p>
           
           <p class="publication">
@@ -240,16 +256,16 @@
             <time datetime="2026">2026</time>
           </p>
 
-          <p class="links">
-            <a href="https://interleave-vla.github.io/Interleave-VLA-Anonymous/">project page</a> /
-            <a href="https://arxiv.org/abs/2505.02152">arXiv</a>
+          <p>
+            <a class="icon-link" href="https://interleave-vla.github.io/Interleave-VLA-Anonymous/"><span class="icon" style="--icon: url('/assets/icons/globe.svg')" aria-hidden="true"></span><span>website</span></a>
+            <a class="icon-link" href="https://arxiv.org/abs/2505.02152"><span class="icon" style="--icon: url('/assets/icons/arxiv.svg')" aria-hidden="true"></span><span>arXiv</span></a>
           </p>
         </div>
 
         <figure>
           <div class="video-item">
-            <img class="video-poster" src="/assets/media/InterleaveVLA-480x480.jpg">
-            <video class="video-source" autoplay muted loop playsinline>
+            <img class="video-poster" src="/assets/media/InterleaveVLA-480x480.jpg" width="480" height="480">
+            <video class="video-source" autoplay muted loop playsinline width="480" height="480">
               <source src="/assets/media/InterleaveVLA-480x480.mp4" type="video/mp4">
             </video>
           </div>
@@ -259,16 +275,10 @@
 
       <div class="proj-item">
         <div>
-          <a href="https://arxiv.org/abs/2509.14617">
-            <h3>HD3C: Efficient Medical Data Classification for Edge Devices</h3>
-          </a>
+          <h3>HD3C: Efficient Medical Data Classification for Edge Devices</h3>
 
           <p class="authors">
-            <strong class="co-first">Jianglan Wei</strong>, 
-            <a href="https://scholar.google.com/citations?user=DzJ844oAAAAJ" class="co-first">Zhenyu Zhang</a>, 
-            <a href="https://outsider86.github.io" class="co-first">Pengcheng Wang</a>, 
-            <a onclick="alert('Profile information not available.')">Mingjie Zeng</a>, 
-            <a href="http://aia.hust.edu.cn/zhigangzeng/">Zhigang Zeng</a>
+            <strong>Jianglan Wei*</strong>, Zhenyu Zhang*, Pengcheng Wang*, Mingjie Zeng, Zhigang Zeng
           </p>
           
           <p class="publication">
@@ -276,17 +286,17 @@
             <time datetime="2026">2026</time>
           </p>
 
-          <p class="links">
-            <a href="https://arxiv.org/abs/2509.14617">arXiv</a> /
-            <a href="https://github.com/jianglanwei/hdc-x">code</a> /
-            <a href="/assets/media/HDCX-patent.pdf">patent</a>
+          <p>
+            <a class="icon-link" href="https://arxiv.org/abs/2509.14617"><span class="icon" style="--icon: url('/assets/icons/arxiv.svg')" aria-hidden="true"></span><span>arXiv</span></a>
+            <a class="icon-link" href="https://github.com/jianglanwei/hd3c"><span class="icon" style="--icon: url('/assets/icons/code.svg')" aria-hidden="true"></span><span>code</span></a>
+            <a class="icon-link" href="/assets/media/HD3C-patent.pdf"><span class="icon" style="--icon: url('/assets/icons/file.svg')" aria-hidden="true"></span><span>patent</span></a>
           </p>
         </div>
 
         <figure>
           <picture>
-            <source media="(min-width: 795px)" srcset="/assets/media/HDCX-small.svg">
-            <img src="/assets/media/HDCX-wide.svg">
+            <source media="(min-width: 800px)" srcset="/assets/media/HD3C-small.svg">
+            <img src="/assets/media/HD3C-wide.svg">
           </picture>
         </figure>
       </div>
@@ -294,16 +304,10 @@
 
       <div class="proj-item">
         <div>
-          <a href="https://www.sciencedirect.com/science/article/pii/S0893608026007665">
-            <h3>DSN: Energy-Efficient EMG Signal Classification Method Enabling Real-Time Monitoring for Edge Healthcare</h3>
-          </a>
+          <h3>DSN: Energy-Efficient EMG Signal Classification Method Enabling Real-Time Monitoring for Edge Healthcare</h3>
 
           <p class="authors">
-            <a href="https://scholar.google.com/citations?user=DzJ844oAAAAJ" class="co-first">Zhenyu Zhang</a>, 
-            <a href="https://scholar.google.com/citations?user=fN0haOMAAAAJ" class="co-first">Xianzhe Meng</a>, 
-            <strong>Jianglan Wei</strong>, 
-            <a onclick="alert('Profile information not available.')">Mingjie Zeng</a>, 
-            <a href="http://aia.hust.edu.cn/zhigangzeng/">Zhigang Zeng</a>
+            Zhenyu Zhang*, Xiaozhe Meng*, <strong>Jianglan Wei</strong>, Mingjie Zeng, Xianzhe Meng, Zhigang Zeng
           </p>
           
           <p class="publication">
@@ -311,13 +315,13 @@
             <span>Vol. 205</span>
           </p>
 
-          <p class="links">
-            <a href="https://www.sciencedirect.com/science/article/pii/S0893608026007665">paper</a>
+          <p>
+            <a class="icon-link" href="https://www.sciencedirect.com/science/article/pii/S0893608026007665"><span class="icon" style="--icon: url('/assets/icons/paper.svg')" aria-hidden="true"></span><span>paper</span></a>
           </p>
         </div>
 
         <figure>
-          <img src="/assets/media/DSN-1872x670.jpg">
+          <img src="/assets/media/DSN-1872x670.png">
         </figure>
       </div>
     </section>
@@ -328,40 +332,34 @@
       <h2>Projects</h2>
       <div class="proj-item">
         <div>
-          <a href="/cs180/">
-            <h3>Computer Vision and Computational Photography</h3>
-          </a>
+          <h3>Computer Vision and Computational Photography</h3>
 
-          <p class="authors">
+          <p class="description">
             UC Berkeley <a href="https://www2.eecs.berkeley.edu/Courses/CS180/">CS180</a> taught by 
             Prof. <a href="https://people.eecs.berkeley.edu/~efros/">Alexei Efros</a> (Fall 2024).
           </p>
 
-          <p class="links">
-            <a href="/cs180/">main page</a> / 
-            <a href="https://github.com/jianglanwei/cs180/">code</a>
-            <br>
-            project pages:
-            <a href="/cs180/proj1/">coloring</a> / 
-            <a href="/cs180/proj2/">blending</a> /
-            <a href="/cs180/proj3/">morphing</a> /
-            <a href="/cs180/proj4/">stitching</a> /
-            <a href="/cs180/proj5/">diffusion</a> /
-            <a href="/cs180/proj6/">NeRF</a>
-            
+          <p>
+            <a class="icon-link" href="/cs180/"><span class="icon" style="--icon: url('/assets/icons/globe.svg')" aria-hidden="true"></span><span>website</span></a>
+            <a class="icon-link" href="https://github.com/jianglanwei/cs180/"><span class="icon" style="--icon: url('/assets/icons/code.svg')" aria-hidden="true"></span><span>code</span></a>
+          </p>
+
+          <p class="description" style="margin-top: -5px; font-size: 14px;">
+            By chapter: <a href="/cs180/proj1/"> coloring</a>, <a href="/cs180/proj2/">blending</a>, <a href="/cs180/proj3/">morphing</a>,
+            <a href="/cs180/proj4/"> stitching</a>, <a href="/cs180/proj5/"> diffusion</a>, <a href="/cs180/proj6/"> NeRF</a>
           </p>
         </div>
         
         <figure>
           <div class="video-item">
-            <img class="video-poster" src="/assets/media/CS180-Morph-900x480.jpg">
-            <video class="video-source" autoplay muted loop playsinline>
-              <source src="/assets/media/CS180-Morph-900x480.mp4" type="video/mp4">
+            <img class="video-poster" src="/assets/media/CS180-Morph-384x480.jpg" width="384" height="480">
+            <video class="video-source" autoplay muted loop playsinline width="384" height="480">
+              <source src="/assets/media/CS180-Morph-384x480.mp4" type="video/mp4">
             </video>
           </div>
           <div class="video-item">
-            <img class="video-poster" src="/assets/media/CS180-NeRF-480x480.jpg">
-            <video class="video-source" autoplay muted loop playsinline>
+            <img class="video-poster" src="/assets/media/CS180-NeRF-480x480.jpg" width="480" height="480">
+            <video class="video-source" autoplay muted loop playsinline width="480" height="480">
               <source src="/assets/media/CS180-NeRF-480x480.mp4" type="video/mp4">
             </video>
           </div>
@@ -370,24 +368,22 @@
 
       <div class="proj-item">
         <div>
-          <a href="https://github.com/jianglanwei/slam/">
-            <h3>Autonomous Vehicle Mapping and Navigation</h3>
-          </a>
+          <h3>Autonomous Vehicle Mapping and Navigation</h3>
 
-          <p class="authors">
+          <p class="description">
             Final project for <em>Autonomous Systems</em> at <a href="https://english.hust.edu.cn/">HUST</a> (Fall 2025).
           </p>
 
-          <p class="links">
-            <a href="https://github.com/jianglanwei/slam/">code</a> /
-            <a href="https://jianglanwei.notion.site/ros2/">study notes</a>
+          <p>
+            <a class="icon-link" href="https://github.com/jianglanwei/slam/"><span class="icon" style="--icon: url('/assets/icons/code.svg')" aria-hidden="true"></span><span>code</span></a>
+            <a class="icon-link" href="https://jianglanwei.notion.site/ros2/"><span class="icon" style="--icon: url('/assets/icons/notion.svg')" aria-hidden="true"></span><span>study notes</span></a>
           </p>
         </div>
 
         <figure>
           <div class="video-item">
-            <img class="video-poster" src="/assets/media/SLAM-960x480.jpg">
-            <video class="video-source" autoplay muted loop playsinline>
+            <img class="video-poster" src="/assets/media/SLAM-960x480.jpg" width="960" height="480">
+            <video class="video-source" autoplay muted loop playsinline width="960" height="480">
               <source src="/assets/media/SLAM-960x480.mp4" type="video/mp4">
             </video>
           </div>
@@ -405,30 +401,24 @@
       </p>
       <div class="notes">
         <div class="note-item">
-          <a href="/notes/ros2/">
-            <h3>ROS 2 Notes</h3>
-          </a>
-          <p class="chapters">Chapters: ROS 2 Basics, Client Libraries with Python, ROS 2 Gazebo Integration.</p>
+          <h3>ROS 2 Notes</h3>
+          <a class="icon-link" href="/notes/ros2/"><span class="icon" style="--icon: url('/assets/icons/notion.svg')" aria-hidden="true"></span><span>Notion</span></a>
           <figure>
             <img src="/assets/media/ROS2-logo.svg">
           </figure>
         </div>
 
         <div class="note-item">
-          <a href="/notes/web-design/">
-            <h3>Web Design Notes</h3>
-          </a>
-          <p class="chapters">Chapters: HTML, CSS.</p>
+          <h3>Web Design Notes</h3>
+          <a class="icon-link" href="/notes/web-design/"><span class="icon" style="--icon: url('/assets/icons/notion.svg')" aria-hidden="true"></span><span>Notion</span></a>
           <figure>
             <img src="/assets/media/CSS3-HTML5-logo.svg">
           </figure>
         </div>
 
         <div class="note-item">
-          <a href="/notes/terminal-command/">
-            <h3>Terminal Command Notes (Linux)</h3>
-          </a>
-          <p class="chapters">Chapters: Shell Basics, Useful Packages (APT, Git).</p>
+          <h3>Terminal Command Notes (Linux)</h3>
+          <a class="icon-link" href="/notes/terminal-command/"><span class="icon" style="--icon: url('/assets/icons/notion.svg')" aria-hidden="true"></span><span>Notion</span></a>
           <figure>
             <img src="/assets/media/Terminal-logo.svg">
           </figure>
@@ -446,8 +436,8 @@
     <!-- Acknowledgment -->
     <footer>
       <p>
-        <span>Template stolen from <a href="https://jonbarron.info">Jon Barron</a> with modifications.</span>
-        <span>Source code available <a href="https://github.com/jianglanwei/jianglanwei.com">here</a>.</span>
+        <span>Inspired by the design of <a href="https://gshi.me">Guanya Shi's page</a>.</span>
+        <span>Feel free to steal <a href="https://github.com/jianglanwei/jianglanwei.com">my template</a>!</span>
       </p>
     </footer>
   </body>
