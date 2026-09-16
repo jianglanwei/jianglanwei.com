@@ -1,31 +1,64 @@
-/* latin-normal */
+/* Variable fonts: 400 = regular (normal), 700 = bold.
+   Try the bundled file first, then the Google Fonts repository fallback.
+   Avoid local() names that could select an installed static font.
+   Use font-optical-sizing: auto on Newsreader text for automatic optical sizing. */
+
+/* lora-normal */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Lora';
   font-style: normal;
-  font-weight: 400;
-  src: local('Lato Regular'), local('Lato-Regular'), url(../fonts/lato-v25-latin_latin-ext-regular.woff2) format('woff2');
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/Lora/Lora-VariableFont_wght.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/lora/Lora%5Bwght%5D.ttf') format('truetype');
 }
 
-/* latin-italic */
+/* lora-italic */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Lora';
   font-style: italic;
-  font-weight: 400;
-  src: local('Lato Italic'), local('Lato-Italic'), url(../fonts/lato-v25-latin_latin-ext-italic.woff2);
+  font-weight: 400 700;
+  font-display: swap;
+  src: url('../fonts/Lora/Lora-Italic-VariableFont_wght.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/lora/Lora-Italic%5Bwght%5D.ttf') format('truetype');
 }
 
-/* latin-bold */
+/* newsreader-normal */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Newsreader';
   font-style: normal;
-  font-weight: 700;
-  src: local('Lato Bold'), local('Lato-Bold'), url(../fonts/lato-v25-latin_latin-ext-700.woff2);
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('../fonts/Newsreader/Newsreader-VariableFont_opsz,wght.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader%5Bopsz,wght%5D.ttf') format('truetype');
 }
 
-/* latin-bold-italic*/
+/* newsreader-italic */
 @font-face {
-  font-family: 'Lato';
+  font-family: 'Newsreader';
   font-style: italic;
-  font-weight: 700;
-  src: local('Lato Bold Italic'), local('Lato-BoldItalic'), url(../fonts/lato-v25-latin_latin-ext-700italic.woff2);
+  font-weight: 200 800;
+  font-display: swap;
+  src: url('../fonts/Newsreader/Newsreader-Italic-VariableFont_opsz,wght.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/newsreader/Newsreader-Italic%5Bopsz,wght%5D.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Serif 4';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('../fonts/SourceSerif4/SourceSerif4-Variable.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/sourceserif4/SourceSerif4%5Bopsz,wght%5D.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: normal;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('../fonts/SourceSans3/SourceSans3-Variable.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/SourceSans3%5Bwght%5D.ttf') format('truetype');
+}
+
+@font-face {
+  font-family: 'Source Sans 3';
+  font-style: italic;
+  font-weight: 200 900;
+  font-display: swap;
+  src: url('../fonts/SourceSans3/SourceSans3-Italic-Variable.ttf') format('truetype'), url('https://raw.githubusercontent.com/google/fonts/main/ofl/sourcesans3/SourceSans3-Italic%5Bwght%5D.ttf') format('truetype');
 }

@@ -1,15 +1,17 @@
-# Jianglan Wei's Research Portfolio
+# Jianglan Wei's Academic Website
 
-This is the source code for my personal research portfolio: [jianglanwei.com](https://jianglanwei.com). 
+This repository contains the source code for my academic website: [jianglanwei.com](https://jianglanwei.com). 
 
-My site is built on [Jon Barron](https://jonbarron.info)'s template, but has been re-engineered in the following ways:
+The overall design is inspired by [Guanya Shi](https://gshi.me) and his lab [LeCAR](https://lecar-lab.github.io/). I adapted their design with the following focus:
 
-- Since many of my video demos are 2:1 widescreen, side-by-side text can become too cramped on smaller screens. I implemented a responsive stack where videos and text collapse into a vertical layout on mobile but stay side-by-side on desktop. Thanks to this adaptive layout, my page also support multiple images/videos per project entry.
+- Project demos and text descriptions are displayed side-by-side on desktop but will collapse into a vertical layout on mobile. This prevents the text from being cramped on smaller screens.
 
-- Videos only play when they enter the client's active viewport. This significantly reduces CPU and memory overhead, especially when hosting dozens of demo videos on a single page.
+- Videos play only when they enter the user's active viewport and pause when they leave it, reducing CPU and memory usage on pages containing many demonstration videos.
 
-- All fonts are hosted directly on this domain and are preloaded to the user's browser. This minimizes the "Flash of Unstyled Text" effect (i.e., the page not displaying the text correctly because fonts aren't loaded yet).
+- All fonts are hosted directly on the domain and preloaded to the user's browser. This prevents the "Flash of Unstyled Text" effect (i.e., the page not displaying the text correctly because fonts aren't loaded yet).
 
-- I opted for a more spacious design and fine-tuned the width ratios to improve readability and overall aesthetics (in my personal opinion).
+- I opted for a more spacious design and fine-tuned content and media proportions.
 
-- I added a custom "404 not found" page. Most web service providers (including Cloudflare and GitHub Pages) automatically redirect requests for non-existent paths to the [404.html](https://jianglanwei.com/404.html) file in the root directory, if it exists.
+- I added a custom ["404 not found" page](https://jianglanwei.com/404.html). Most web service providers (including Cloudflare and GitHub Pages) automatically redirect requests for non-existent paths to the `404.html` file in the root directory, if it exists.
+
+To use my template, you only need to edit the `index.html` file and fill in your information. The page is styled by `assets/css/styles.css`. Fonts are defined in `assets/css/fonts.css` and are installed in the `assets/fonts` folder.
